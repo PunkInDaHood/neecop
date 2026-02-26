@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <h3 className="text-2xl font-heading font-bold mb-4">Neecop</h3>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
-              Empowering India's startup ecosystem through innovation, policy engagement, and community building.
+              Advancing India's energy and startup ecosystem through data-driven research and policy engagement.
             </p>
             <div className="flex gap-4">
               <a
@@ -32,8 +32,8 @@ const Footer = () => {
               {[
                 { label: "Home", to: "/" },
                 { label: "About Us", to: "/about" },
-                { label: "Services", to: "/services" },
                 { label: "Initiatives", to: "/initiatives" },
+                { label: "Contact", to: "/contact" },
               ].map((link) => (
                 <Link key={link.to} to={link.to} className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   {link.label}
@@ -42,22 +42,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Get Involved */}
-          <div>
-            <h4 className="font-heading font-semibold mb-4 text-sm uppercase tracking-wider text-primary-foreground/50">Get Involved</h4>
-            <div className="flex flex-col gap-2">
-              {[
-                { label: "For Startups", to: "/get-involved" },
-                { label: "For Investors", to: "/get-involved" },
-                { label: "For Partners", to: "/get-involved" },
-                { label: "Contact Us", to: "/contact" },
-              ].map((link, i) => (
-                <Link key={i} to={link.to} className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
 
           {/* Contact */}
           <div>

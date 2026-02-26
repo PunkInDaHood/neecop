@@ -13,16 +13,6 @@ const items = [
     title: "Draft Delhi Startup Policy 2025",
     desc: "Neecop, in collaboration with Kirori Mal College, University of Delhi, convened high-level Round Table Conferences to co-create the future of Delhi's startup ecosystem. We bring together founders, investors, and policy experts to build a robust, inclusive innovation hub.",
   },
-  {
-    icon: LayoutDashboard,
-    title: "Neecop Startup Dashboard",
-    desc: "A comprehensive digital platform for startups to manage their journey — track milestones, access resources, connect with mentors, and gain visibility. The Dashboard serves as the central hub for the Neecop network.",
-  },
-  {
-    icon: Newspaper,
-    title: "The Neecop Scoop",
-    desc: "Our curated media initiative delivering the latest insights in business, technology, and finance. Stay ahead with expert analysis on market trends, tech breakthroughs, and policy shifts shaping India's economic landscape.",
-  },
 ];
 
 const Initiatives = () => {
