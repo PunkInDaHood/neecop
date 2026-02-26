@@ -158,15 +158,15 @@ const Index = () => {
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {[
-            { title: "Energy Future", highlight: "Minister of Power launches 'Evaluating Domestic Power Supply' research initiative across 35 NCR districts." },
-            { title: "Fostering Innovation", highlight: "Two-day Round Table Conference held to co-create the Draft Delhi Startup Policy 2025 with key stakeholders." },
-            { title: "Global Dialogues", highlight: "Bridging academic insights with international policy through the India Europe Economic Policy Dialogue." }
+            { title: "Energy Future", highlight: "Ministry of Power approves ₹3,600Cr for NCR infrastructure upgrades and smart grid expansion.", id: "energy-baseline" },
+            { title: "Fostering Innovation", highlight: "Draft Delhi Startup Policy 2025 proposes ₹200Cr VC fund to support 5,000 startups by 2035.", id: "startup-policy" },
+            { title: "Global Dialogues", highlight: "New Strategic EU-India Agenda 2025 targets FTA conclusion and clean energy partnerships.", id: "india-europe-strategic-agenda" }
           ].map((news, idx) => (
             <div key={idx} className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow">
               <h3 className="font-heading font-bold text-primary mb-3">🔹 {news.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">{news.highlight}</p>
               <Button variant="link" size="sm" className="p-0 text-secondary" asChild>
-                <Link to="/initiatives">Read More <ArrowRight className="h-4 w-4" /></Link>
+                <Link to={`/news/${news.id}`}>Read More <ArrowRight className="h-4 w-4" /></Link>
               </Button>
             </div>
           ))}
