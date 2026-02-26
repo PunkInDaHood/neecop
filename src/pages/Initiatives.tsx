@@ -5,16 +5,19 @@ import { Button } from "@/components/ui/button";
 
 const items = [
   {
+    slug: "ncr-energy",
     icon: Zap,
     title: "NCR Energy Research Initiative",
     desc: "A joint research program with Kirori Mal College, surveying 100+ villages across NCR, Haryana, UP, and Rajasthan. We are mapping power usage patterns and the impact of smart meters, decentralized renewables, and battery storage systems on rural energy stability.",
   },
   {
+    slug: "delhi-startup-policy",
     icon: Landmark,
     title: "Draft Delhi Startup Policy 2025",
     desc: "Facilitating high-level stakeholder research to propose a ₹200-crore Startup VC Fund, founder stipends (₹30k/50k), and 100% patent reimbursements. Our goal is to nurture 5,000+ startups in AI, Green Energy, and Drones by 2035.",
   },
   {
+    slug: "india-europe-dialogue",
     icon: Globe,
     title: "India Europe Economic Policy Dialogue",
     desc: "A strategic research platform bridging academic insights from Kirori Mal College with international policy frameworks. We focus on enhancing bilateral trade foundations, green energy cooperation, and technological research in AI and Semiconductors.",
@@ -45,7 +48,7 @@ const Initiatives = () => {
                   <h2 className="text-2xl font-heading font-bold text-foreground mb-3">{item.title}</h2>
                   <p className="text-muted-foreground leading-relaxed mb-4">{item.desc}</p>
                   <Button variant="link" className="p-0 text-secondary gap-1" asChild>
-                    <Link to="/contact">Learn More <ArrowRight className="h-4 w-4" /></Link>
+                    <Link to={`/initiatives/${item.slug}`}>Learn More <ArrowRight className="h-4 w-4" /></Link>
                   </Button>
                 </div>
               </div>

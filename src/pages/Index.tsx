@@ -16,9 +16,9 @@ const fadeUpItem: Variants = {
 };
 
 const initiatives = [
-  { title: "NCR Energy Research Initiative", desc: "Data-driven energy policy research launched by the Ministry of Power to steer India's sustainable ecosystem.", cta: "Explore Initiative" },
-  { title: "Delhi Startup Policy 2025", desc: "Co-creating an inclusive startup ecosystem through high-level consultative roundtables and policy dialogues.", cta: "Learn More" },
-  { title: "India Europe Economic Policy Dialogue", desc: "Bridging academic research and international policy, focusing on Green Energy, AI, Semiconductors, and Trade connectivity.", cta: "Read More" },
+  { slug: "ncr-energy", title: "NCR Energy Research Initiative", desc: "Data-driven energy policy research launched by the Ministry of Power to steer India's sustainable ecosystem.", cta: "Explore Initiative" },
+  { slug: "delhi-startup-policy", title: "Project Delhi Policy 2025", desc: "Co-creating an inclusive startup ecosystem through high-level consultative roundtables and policy dialogues.", cta: "Learn More" },
+  { slug: "india-europe-dialogue", title: "India Europe Economic Dialogue", desc: "Bridging academic research and international policy, focusing on Green Energy, AI, Semiconductors, and Trade connectivity.", cta: "Read More" },
 ];
 
 
@@ -112,7 +112,7 @@ const Index = () => {
               <h3 className="font-heading font-semibold text-foreground text-lg mb-3">{item.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-6">{item.desc}</p>
               <Button variant="link" className="p-0 text-secondary gap-1" asChild>
-                <Link to="/initiatives">{item.cta} <ArrowRight className="h-4 w-4" /></Link>
+                <Link to={`/initiatives/${item.slug}`}>{item.cta} <ArrowRight className="h-4 w-4" /></Link>
               </Button>
             </motion.div>
           ))}
@@ -147,6 +147,31 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Neecop Scoop Section */}
+      <SectionWrapper className="bg-muted/30">
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl font-heading font-bold text-foreground mb-4">The Neecop Scoop</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Insights on the forces shaping India’s economic, business, and tech landscape, curated from our latest policy research and LinkedIn updates.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            { title: "Energy Future", highlight: "Minister of Power launches 'Evaluating Domestic Power Supply' research initiative across 35 NCR districts." },
+            { title: "Fostering Innovation", highlight: "Two-day Round Table Conference held to co-create the Draft Delhi Startup Policy 2025 with key stakeholders." },
+            { title: "Global Dialogues", highlight: "Bridging academic insights with international policy through the India Europe Economic Policy Dialogue." }
+          ].map((news, idx) => (
+            <div key={idx} className="bg-card p-6 rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="font-heading font-bold text-primary mb-3">🔹 {news.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">{news.highlight}</p>
+              <Button variant="link" size="sm" className="p-0 text-secondary" asChild>
+                <Link to="/initiatives">Read More <ArrowRight className="h-4 w-4" /></Link>
+              </Button>
+            </div>
+          ))}
+        </div>
+      </SectionWrapper>
     </>
   );
 };
