@@ -19,6 +19,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <Link to="/" className="flex items-center gap-2">
+          <img src="https://neecop.com/logo.png" alt="Neecop Logo" className="h-8 w-auto object-contain" />
           <span className="text-2xl font-heading font-bold text-primary">Neecop</span>
         </Link>
 
@@ -29,8 +30,8 @@ const Navbar = () => {
               key={link.to}
               to={link.to}
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${location.pathname === link.to
-                  ? "text-secondary font-semibold"
-                  : "text-foreground/70 hover:text-foreground"
+                ? "text-secondary font-semibold"
+                : "text-foreground/70 hover:text-foreground"
                 }`}
             >
               {link.label}
@@ -66,8 +67,8 @@ const Navbar = () => {
                   to={link.to}
                   onClick={() => setMobileOpen(false)}
                   className={`px-3 py-2 rounded-md text-sm font-medium ${location.pathname === link.to
-                      ? "text-secondary bg-muted font-semibold"
-                      : "text-foreground/70"
+                    ? "text-secondary bg-muted font-semibold"
+                    : "text-foreground/70"
                     }`}
                 >
                   {link.label}

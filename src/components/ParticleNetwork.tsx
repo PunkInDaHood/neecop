@@ -80,13 +80,13 @@ function Particles() {
           posAttr.array[idx + 4] = particles[j].position.y;
           posAttr.array[idx + 5] = particles[j].position.z;
 
-          // Teal color with fade
-          colAttr.array[idx] = 0.2 * alpha;
-          colAttr.array[idx + 1] = 0.7 * alpha;
-          colAttr.array[idx + 2] = 0.6 * alpha;
-          colAttr.array[idx + 3] = 0.2 * alpha;
-          colAttr.array[idx + 4] = 0.7 * alpha;
-          colAttr.array[idx + 5] = 0.6 * alpha;
+          // Neon Cyan color with fade
+          colAttr.array[idx] = 0.0 * alpha;
+          colAttr.array[idx + 1] = 0.9 * alpha;
+          colAttr.array[idx + 2] = 1.0 * alpha;
+          colAttr.array[idx + 3] = 0.0 * alpha;
+          colAttr.array[idx + 4] = 0.9 * alpha;
+          colAttr.array[idx + 5] = 1.0 * alpha;
 
           lineIdx++;
           if (lineIdx >= PARTICLE_COUNT * 6) break;
@@ -104,7 +104,7 @@ function Particles() {
     <>
       <instancedMesh ref={meshRef} args={[undefined, undefined, PARTICLE_COUNT]}>
         <sphereGeometry args={[1, 8, 8]} />
-        <meshBasicMaterial color="#4dd0b8" transparent opacity={0.7} />
+        <meshBasicMaterial color="#00e5ff" transparent opacity={0.7} />
       </instancedMesh>
       <lineSegments ref={linesRef} geometry={lineGeometry}>
         <lineBasicMaterial vertexColors transparent opacity={0.4} />

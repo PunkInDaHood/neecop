@@ -8,7 +8,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-heading font-bold mb-4">Neecop</h3>
+            <Link to="/" className="flex items-center gap-2 mb-4 group">
+              <img src="https://neecop.com/logo.png" alt="Neecop Logo" className="h-8 w-auto object-contain brightness-0 invert" />
+              <span className="text-2xl font-heading font-bold">Neecop</span>
+            </Link>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
               Advancing India's energy and startup ecosystem through data-driven research and policy engagement.
             </p>

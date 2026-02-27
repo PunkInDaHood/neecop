@@ -18,7 +18,7 @@
     --primary: 216 75% 15%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 170 55% 40%;
+    --secondary: 190 90% 45%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 210 20% 95%;
@@ -32,31 +32,31 @@
 
     --border: 214 25% 90%;
     --input: 214 25% 90%;
-    --ring: 170 55% 40%;
+    --ring: 190 90% 45%;
 
     --radius: 0.75rem;
 
     --sidebar-background: 216 75% 12%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 170 55% 40%;
+    --sidebar-primary: 190 90% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 216 60% 20%;
     --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 216 60% 20%;
-    --sidebar-ring: 170 55% 40%;
+    --sidebar-ring: 190 90% 45%;
 
     /* Custom tokens */
     --navy: 216 75% 15%;
     --navy-light: 216 60% 25%;
-    --teal: 170 55% 40%;
-    --teal-light: 170 45% 55%;
+    --teal: 190 90% 45%;
+    --teal-light: 190 80% 60%;
     --orange: 25 95% 55%;
     --gradient-primary: linear-gradient(135deg, hsl(216 75% 15%), hsl(216 60% 25%));
-    --gradient-accent: linear-gradient(135deg, hsl(170 55% 40%), hsl(170 45% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(190 90% 45%), hsl(190 80% 60%));
     --gradient-hero: linear-gradient(180deg, hsl(216 75% 15%) 0%, hsl(216 65% 10%) 100%);
     --shadow-card: 0 4px 24px -4px hsl(216 75% 15% / 0.08);
     --shadow-card-hover: 0 12px 40px -8px hsl(216 75% 15% / 0.15);
-    --shadow-glow: 0 0 40px hsl(170 55% 40% / 0.2);
+    --shadow-glow: 0 0 40px hsl(190 90% 45% / 0.3);
   }
 
   .dark {
@@ -66,7 +66,7 @@
     --card-foreground: 210 20% 95%;
     --popover: 216 65% 12%;
     --popover-foreground: 210 20% 95%;
-    --primary: 170 55% 40%;
+    --primary: 190 90% 45%;
     --primary-foreground: 0 0% 100%;
     --secondary: 216 60% 25%;
     --secondary-foreground: 210 20% 95%;
@@ -78,7 +78,7 @@
     --destructive-foreground: 210 40% 98%;
     --border: 216 50% 20%;
     --input: 216 50% 20%;
-    --ring: 170 55% 40%;
+    --ring: 190 90% 45%;
   }
 }
 
@@ -92,7 +92,12 @@
     scroll-behavior: smooth;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Poppins', sans-serif;
   }
 }
@@ -100,7 +105,7 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(170 55% 40%), hsl(170 45% 55%));
+    background-image: linear-gradient(135deg, hsl(190 90% 45%), hsl(190 80% 60%));
   }
 
   .bg-navy {

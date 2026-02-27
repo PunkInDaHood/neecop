@@ -2,7 +2,17 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/SectionWrapper";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Zap, Landmark, Globe, CheckCircle2, BarChart3, Microscope } from "lucide-react";
+import { ArrowLeft, Zap, Landmark, Globe, CheckCircle2, BarChart3, Microscope, ImageIcon } from "lucide-react";
+import ncr1 from "@/assets/ncr/DSC01584.JPG.jpeg";
+import ncr2 from "@/assets/ncr/DSC01648.JPG.jpeg";
+import ncr3 from "@/assets/ncr/DSC_0346.JPG.jpeg";
+import ncr4 from "@/assets/ncr/DSC_0454.JPG.jpeg";
+import rt1 from "@/assets/roundtable/WhatsApp Image 2026-02-27 at 19.59.38.jpeg";
+import rt2 from "@/assets/roundtable/WhatsApp Image 2026-02-27 at 19.59.43.jpeg";
+import rt3 from "@/assets/roundtable/WhatsApp Image 2026-02-27 at 19.59.50.jpeg";
+import rt4 from "@/assets/roundtable/WhatsApp Image 2026-02-27 at 19.59.55.jpeg";
+import rt5 from "@/assets/roundtable/WhatsApp Image 2026-02-27 at 20.00.01.jpeg";
+import rt6 from "@/assets/roundtable/WhatsApp Image 2026-02-27 at 20.00.05.jpeg";
 
 const initiativeData: Record<string, any> = {
     "ncr-energy": {
@@ -19,7 +29,8 @@ const initiativeData: Record<string, any> = {
         recruitment: [
             "Research Consultants (Analytical Research)",
             "Field Investigators (On-ground Surveys)"
-        ]
+        ],
+        gallery: [ncr1, ncr2, ncr3, ncr4]
     },
     "delhi-startup-policy": {
         title: "Draft Delhi Startup Policy 2025",
@@ -32,7 +43,8 @@ const initiativeData: Record<string, any> = {
             { title: "Empowerment & Inclusion", desc: "Focused dialogues on enabling women, youth, and marginalized groups within the ecosystem." }
         ],
         detailedContent: "This closed-door consultative dialogue brought together founders, investors, and policy experts. The round table was not just about discussions; it was about building consensus and ensuring every participant had a voice in co-creating the ₹200-crore Startup VC Fund and stipend policies.",
-        highlights: ["Financial Incentives", "Infrastructure & Support", "Governance Mechanisms", "Awareness & Outreach"]
+        highlights: ["Financial Incentives", "Infrastructure & Support", "Governance Mechanisms", "Awareness & Outreach"],
+        gallery: [rt1, rt2, rt3, rt4, rt5, rt6]
     },
     "india-europe-dialogue": {
         title: "India Europe Economic Policy Dialogue",
@@ -170,6 +182,41 @@ const InitiativeDetail = () => {
                     </div>
                 </div>
             </SectionWrapper>
+
+            {/* Image Gallery */}
+            {data.gallery && (
+                <section className="pb-24 bg-muted/30">
+                    <div className="container mx-auto px-4">
+                        <div className="flex items-center gap-3 mb-12">
+                            <ImageIcon className="text-secondary h-8 w-8" />
+                            <h2 className="text-3xl font-heading font-bold text-foreground italic underline decoration-secondary/30 underline-offset-8">
+                                Project Gallery
+                            </h2>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {data.gallery.map((img: string, idx: number) => (
+                                <motion.div
+                                    key={idx}
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: idx * 0.1 }}
+                                    className="group relative aspect-square overflow-hidden rounded-2xl border border-border bg-card shadow-sm hover:shadow-xl transition-all duration-500"
+                                >
+                                    <img
+                                        src={img}
+                                        alt={`${data.title} Gallery ${idx + 1}`}
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                        <p className="text-white text-sm font-medium">Research Milestone View {idx + 1}</p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
         </div>
     );
 };

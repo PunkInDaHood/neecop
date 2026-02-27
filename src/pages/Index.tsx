@@ -3,7 +3,7 @@ import { motion, type Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import SectionWrapper from "@/components/SectionWrapper";
 import ParticleNetwork from "@/components/ParticleNetwork";
-import { Rocket, Users, TrendingUp, Globe, Shield, Zap, Target, Lightbulb, ArrowRight, Quote } from "lucide-react";
+import { Users, TrendingUp, Globe, Shield, Zap, Target, Lightbulb, ArrowRight, Quote } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const staggerContainer: Variants = {
