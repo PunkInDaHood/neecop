@@ -193,7 +193,7 @@ const InitiativeDetail = () => {
                                 Project Gallery
                             </h2>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-6">
                             {data.gallery.map((img: string, idx: number) => (
                                 <motion.div
                                     key={idx}
@@ -201,7 +201,7 @@ const InitiativeDetail = () => {
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: idx * 0.1 }}
-                                    className="group relative aspect-square overflow-hidden rounded-2xl border border-border bg-card shadow-sm hover:shadow-xl transition-all duration-500"
+                                    className="group relative aspect-video overflow-hidden rounded-2xl border border-border bg-card shadow-sm hover:shadow-xl transition-all duration-500"
                                 >
                                     <img
                                         src={img}
