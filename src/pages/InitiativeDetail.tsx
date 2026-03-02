@@ -190,7 +190,7 @@ const InitiativeDetail = () => {
                         <div className="flex items-center gap-3 mb-12">
                             <ImageIcon className="text-secondary h-8 w-8" />
                             <h2 className="text-3xl font-heading font-bold text-foreground italic underline decoration-secondary/30 underline-offset-8">
-                                Project Gallery
+                                Gallery
                             </h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-6">

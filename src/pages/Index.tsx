@@ -17,7 +17,7 @@ const fadeUpItem: Variants = {
 
 const initiatives = [
   { slug: "ncr-energy", title: "NCR Energy Research Initiative", desc: "Data-driven energy policy research launched by the Ministry of Power to steer India's sustainable ecosystem.", cta: "Explore Initiative" },
-  { slug: "delhi-startup-policy", title: "Project Delhi Policy 2025", desc: "Co-creating an inclusive startup ecosystem through high-level consultative roundtables and policy dialogues.", cta: "Learn More" },
+  { slug: "delhi-startup-policy", title: "Delhi Policy 2025", desc: "Co-creating an inclusive startup ecosystem through high-level consultative roundtables and policy dialogues.", cta: "Learn More" },
   { slug: "india-europe-dialogue", title: "India Europe Economic Dialogue", desc: "Bridging academic research and international policy, focusing on Green Energy, AI, Semiconductors, and Trade connectivity.", cta: "Read More" },
 ];
 
